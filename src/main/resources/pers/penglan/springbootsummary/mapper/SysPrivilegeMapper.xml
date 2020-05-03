@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="pers.penglan.springbootsummary.mapper.SysPrivilegeMapper">
+
+    <cache eviction="LRU"
+           size="100"
+           readOnly="false"/>
+
+    <resultMap id="sysPrivilegeMap" type="pers.penglan.springbootsummary.model.SysPrivilege">
+        <id property="id" column="id"/>
+        <result property="privilegeName" column="privilege_name"/>
+        <result property="privilegeUrl" column="privilege_url"/>
+    </resultMap>
+
+    <!--再Where后面添加1 = 1 是为了容错，防止sql错误。
+    id != '' 和 id >= 0 都行，这是因为mybatis中的OGNL好像可以将传入的值转换为目标比较值的实际类型之后再进行实际的比较-->
+    <select id="selectByObject" resultMap="sysPrivilegeMap">
+        SELECT
+          id,
+          privilege_name,
+          privilege_url
+        FROM
+          sys_privilege
+        WHERE
+          1 = 1
+          <if test="id != null and id != ''">
+              AND id = #{id}
+          </if>
+          <if test="privilegeName != null and privilegeName != ''">
+              AND privilege_name LIKE #{privilegeName}
+          </if>
+          <if test="privilegeUrl != null and privilegeUrl != ''">
+              AND privilege_url LIKE #{privilegeUrl}
+          </if>
+
+    </select>
+
+    <update id="updateById">
+        UPDATE
+          sys_privilege
+        SET
+          <if test="privilegeName != null and privilegeName != ''">
+              privilege_name = #{privilegeName},
+          </if>
+          <if test="privilegeUrl != null and privilegeUrl != ''">
+              privilege_url = #{privilegeUrl},
+          </if>
+          id = #{id}
+        WHERE
+          id = #{id}
+    </update>
+
+    <!--最后一个privilege_url的作用是可以防止sql语法错误-->
+    <insert id="insertOne">
+        INSERT INTO
+          sys_privilege(
+            <if test="id != null and id != ''">
+                id,
+            </if>
+            <if test="privilegeName != null and privilegeName != ''">
+                privilege_name,
+            </if>
+            privilege_url
+          )
+        VALUES(
+          <if test="id != null and id != ''">
+              #{id},
+          </if>
+          <if test="privilegeName != null and privilegeName != ''">
+              #{privilegeName},
+          </if>
+          #{privilegeUrl}
+        )
+    </insert>
+
+    <!--1 = 2 可以确保条件都不符合时啥也查不到-->
+    <select id="selectByIdOrName" resultMap="sysPrivilegeMap">
+        SELECT
+          id,
+          privilege_name,
+          privilege_url
+        FROM
+          sys_privilege
+        WHERE
+          1 = 1
+          <choose>
+              <when test="id != null and id != ''">
+                  AND id = #{id}
+              </when>
+              <when test="privilegeName != null and privilegeName != ''">
+                  AND privilege_name LIKE #{privilegeName}
+              </when>
+              <otherwise>
+                  AND 1 = 2
+              </otherwise>
+          </choose>
+    </select>
+
+    <!--selectByIdOrName可以使用where标签代替-->
+    <select id="selectByIdOrName2" resultMap="sysPrivilegeMap">
+        SELECT
+          id,
+          privilege_name,
+          privilege_url
+        FROM
+          sys_privilege
+        <where>
+            <choose>
+                <when test="id != null and id != ''">
+                    AND id = #{id}
+                </when>
+                <when test="privilegeName != null and privilegeName != ''">
+                    AND privilege_name LIKE #{privilegeName}
+                </when>
+                <otherwise>
+                    AND 1 = 2
+                </otherwise>
+            </choose>
+        </where>
+
+    </select>
+
+    <!--使用foreach实现in中的数据添加.
+    对于collection属性的值，最好使用@param注解在传入参数处指定，不要使用mybatis内置的-->
+    <select id="selectByList" resultMap="sysPrivilegeMap">
+        SELECT
+          id,
+          privilege_name,
+          privilege_url
+        FROM
+          sys_privilege
+        <where>
+            id IN
+            <foreach collection="idList" open="(" close=")" item="sysPrivilege" separator=",">
+                #{sysPrivilege.id}
+            </foreach>
+        </where>
+    </select>
+    
+    <insert id="insertList">
+        INSERT INTO
+          sys_privilege(
+            privilege_name,
+            privilege_url
+          )
+        VALUES
+        <foreach collection="sysPrivilegeList" item="item" separator=",">
+            (
+              #{item.privilegeName},
+              #{item.privilegeUrl}
+            )
+        </foreach>
+    </insert>
+
+    <!--此处foreach中的collection如果传入的为map，则index的值不再是索引值，而是Map中key的值,
+    注意：引用key值作为预编译的值时，记得得使用${}的方式-->
+    <update id="updateByMap">
+        UPDATE
+          sys_privilege
+        <set>
+            <foreach collection="sysPrivilegeMap" item="item" index="columnName" separator=",">
+                ${columnName} = #{item}
+            </foreach>
+        </set>
+        <where>
+            id = #{sysPrivilegeMap.id};
+        </where>
+
+    </update>
+
+</mapper>

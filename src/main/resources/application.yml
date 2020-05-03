@@ -1,0 +1,27 @@
+#激活jdbc的配置
+spring:
+  profiles:
+    active: c3p0
+    #active: jdbc
+
+#spring:
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/mybatis-summary?characterEncoding=utf-8&serverTimezone=UTC&useSSL=false
+#    username: root
+#    password: 4425320
+#    driverClassName: com.mysql.cj.jdbc.Driver
+
+#mybatis配置
+mybatis:
+  config-location: classpath:config/mybatisConfig.xml
+
+#日志配置
+logging:
+  config: classpath:config/Log4j2Config.xml
+
+#修改jetty的端口
+server:
+  port: 80
+  servlet:
+    contextPath: /sbs
+

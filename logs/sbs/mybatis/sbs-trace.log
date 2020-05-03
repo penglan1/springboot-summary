@@ -1,0 +1,19 @@
+14:23:57.881 | DEBUG | [qtp1456464145-36] | org.apache.ibatis.cache.decorators.LoggingCache | getObject | 60:>>Cache Hit Ratio [pers.penglan.springbootsummary.mapper.SysPrivilegeMapper]: 0.0
+14:23:58.221 | DEBUG | [qtp1456464145-36] | org.apache.ibatis.logging.jdbc.BaseJdbcLogger | debug | 143:>>==>  Preparing: SELECT id, privilege_name, privilege_url FROM sys_privilege WHERE 1 = 1 AND id = ? 
+14:23:58.252 | DEBUG | [qtp1456464145-36] | org.apache.ibatis.logging.jdbc.BaseJdbcLogger | debug | 143:>>==> Parameters: 1(Long)
+14:23:58.303 | TRACE | [qtp1456464145-36] | org.apache.ibatis.logging.jdbc.BaseJdbcLogger | trace | 149:>><==    Columns: id, privilege_name, privilege_url
+14:23:58.305 | TRACE | [qtp1456464145-36] | org.apache.ibatis.logging.jdbc.BaseJdbcLogger | trace | 149:>><==        Row: 1, 用户管理, /users
+14:23:58.307 | DEBUG | [qtp1456464145-36] | org.apache.ibatis.logging.jdbc.BaseJdbcLogger | debug | 143:>><==      Total: 1
+15:17:07.561 | DEBUG | [qtp1483998054-35] | org.apache.ibatis.cache.decorators.LoggingCache | getObject | 60:>>Cache Hit Ratio [pers.penglan.springbootsummary.mapper.SysPrivilegeMapper]: 0.0
+15:17:07.790 | DEBUG | [qtp1483998054-35] | org.apache.ibatis.logging.jdbc.BaseJdbcLogger | debug | 143:>>==>  Preparing: SELECT id, privilege_name, privilege_url FROM sys_privilege WHERE 1 = 1 AND id = ? 
+15:17:07.818 | DEBUG | [qtp1483998054-35] | org.apache.ibatis.logging.jdbc.BaseJdbcLogger | debug | 143:>>==> Parameters: 1(Long)
+15:17:07.845 | TRACE | [qtp1483998054-35] | org.apache.ibatis.logging.jdbc.BaseJdbcLogger | trace | 149:>><==    Columns: id, privilege_name, privilege_url
+15:17:07.846 | TRACE | [qtp1483998054-35] | org.apache.ibatis.logging.jdbc.BaseJdbcLogger | trace | 149:>><==        Row: 1, 用户管理, /users
+15:17:07.848 | DEBUG | [qtp1483998054-35] | org.apache.ibatis.logging.jdbc.BaseJdbcLogger | debug | 143:>><==      Total: 1
+16:08:33.647 | DEBUG | [qtp629016615-34] | org.apache.ibatis.cache.decorators.LoggingCache | getObject | 60:>>Cache Hit Ratio [pers.penglan.springbootsummary.mapper.SysPrivilegeMapper]: 0.0
+16:18:49.795 | DEBUG | [qtp2089054322-33] | org.apache.ibatis.cache.decorators.LoggingCache | getObject | 60:>>Cache Hit Ratio [pers.penglan.springbootsummary.mapper.SysPrivilegeMapper]: 0.0
+16:18:50.037 | DEBUG | [qtp2089054322-33] | org.apache.ibatis.logging.jdbc.BaseJdbcLogger | debug | 143:>>==>  Preparing: SELECT id, privilege_name, privilege_url FROM sys_privilege WHERE 1 = 1 AND id = ? 
+16:18:50.064 | DEBUG | [qtp2089054322-33] | org.apache.ibatis.logging.jdbc.BaseJdbcLogger | debug | 143:>>==> Parameters: 1(Long)
+16:18:50.090 | TRACE | [qtp2089054322-33] | org.apache.ibatis.logging.jdbc.BaseJdbcLogger | trace | 149:>><==    Columns: id, privilege_name, privilege_url
+16:18:50.091 | TRACE | [qtp2089054322-33] | org.apache.ibatis.logging.jdbc.BaseJdbcLogger | trace | 149:>><==        Row: 1, 用户管理, /users
+16:18:50.094 | DEBUG | [qtp2089054322-33] | org.apache.ibatis.logging.jdbc.BaseJdbcLogger | debug | 143:>><==      Total: 1

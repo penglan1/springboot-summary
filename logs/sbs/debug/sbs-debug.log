@@ -1,0 +1,11 @@
+14:22:19.932 | DEBUG | [qtp1456464145-34] | pers.penglan.springbootsummary.controller.interceptor.HandlerInterceptorDemo | preHandle | 22:>>拦截器Demo进入
+14:22:19.950 | DEBUG | [qtp1456464145-34] | pers.penglan.springbootsummary.controller.interceptor.HandlerInterceptorDemo | postHandle | 28:>>拦截器退出
+14:23:41.551 | DEBUG | [qtp1456464145-29] | pers.penglan.springbootsummary.controller.interceptor.HandlerInterceptorDemo | preHandle | 22:>>拦截器Demo进入
+14:23:57.779 | DEBUG | [qtp1456464145-36] | pers.penglan.springbootsummary.controller.interceptor.HandlerInterceptorDemo | preHandle | 22:>>拦截器Demo进入
+14:23:58.320 | DEBUG | [qtp1456464145-36] | pers.penglan.springbootsummary.controller.interceptor.HandlerInterceptorDemo | postHandle | 28:>>拦截器退出
+15:16:50.250 | DEBUG | [qtp1483998054-30] | pers.penglan.springbootsummary.controller.interceptor.HandlerInterceptorDemo | preHandle | 22:>>拦截器Demo进入
+15:17:00.015 | DEBUG | [qtp1483998054-35] | pers.penglan.springbootsummary.controller.interceptor.HandlerInterceptorDemo | preHandle | 22:>>拦截器Demo进入
+15:17:07.855 | DEBUG | [qtp1483998054-35] | pers.penglan.springbootsummary.controller.interceptor.HandlerInterceptorDemo | postHandle | 28:>>拦截器退出
+16:08:24.922 | DEBUG | [qtp629016615-34] | pers.penglan.springbootsummary.controller.interceptor.HandlerInterceptorDemo | preHandle | 22:>>拦截器Demo进入
+16:18:49.684 | DEBUG | [qtp2089054322-33] | pers.penglan.springbootsummary.controller.interceptor.HandlerInterceptorDemo | preHandle | 22:>>拦截器Demo进入
+16:18:50.105 | DEBUG | [qtp2089054322-33] | pers.penglan.springbootsummary.controller.interceptor.HandlerInterceptorDemo | postHandle | 28:>>拦截器退出

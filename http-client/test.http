@@ -1,0 +1,10 @@
+GET http://localhost:8080/first/hello
+
+<> 2020-04-22T020208.404.json
+
+### 测试数据源
+POST http://localhost:8080/config/datasource
+Accept: */*
+Cache-Control: no-cache
+
+###

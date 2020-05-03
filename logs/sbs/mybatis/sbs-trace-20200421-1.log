@@ -1,0 +1,14 @@
+22:37:27.621 | DEBUG | [qtp395752148-77] | org.apache.ibatis.cache.decorators.LoggingCache | getObject | 60:>>Cache Hit Ratio [pers.penglan.springbootsummary.mapper.SysPrivilegeMapper]: 0.0
+22:37:28.422 | DEBUG | [qtp395752148-77] | org.apache.ibatis.logging.jdbc.BaseJdbcLogger | debug | 143:>>==>  Preparing: SELECT id, privilege_name, privilege_url FROM sys_privilege WHERE 1 = 1 AND id = ? 
+22:37:28.499 | DEBUG | [qtp395752148-77] | org.apache.ibatis.logging.jdbc.BaseJdbcLogger | debug | 143:>>==> Parameters: 1(Long)
+22:37:28.578 | TRACE | [qtp395752148-77] | org.apache.ibatis.logging.jdbc.BaseJdbcLogger | trace | 149:>><==    Columns: id, privilege_name, privilege_url
+22:37:28.581 | TRACE | [qtp395752148-77] | org.apache.ibatis.logging.jdbc.BaseJdbcLogger | trace | 149:>><==        Row: 1, 用户管理, /users
+22:37:28.592 | DEBUG | [qtp395752148-77] | org.apache.ibatis.logging.jdbc.BaseJdbcLogger | debug | 143:>><==      Total: 1
+22:37:50.375 | DEBUG | [qtp395752148-72] | org.apache.ibatis.cache.decorators.LoggingCache | getObject | 60:>>Cache Hit Ratio [pers.penglan.springbootsummary.mapper.SysPrivilegeMapper]: 0.5
+22:37:52.521 | DEBUG | [qtp395752148-76] | org.apache.ibatis.cache.decorators.LoggingCache | getObject | 60:>>Cache Hit Ratio [pers.penglan.springbootsummary.mapper.SysPrivilegeMapper]: 0.6666666666666666
+22:40:02.262 | DEBUG | [qtp1379222018-79] | org.apache.ibatis.cache.decorators.LoggingCache | getObject | 60:>>Cache Hit Ratio [pers.penglan.springbootsummary.mapper.SysPrivilegeMapper]: 0.0
+22:40:02.642 | DEBUG | [qtp1379222018-79] | org.apache.ibatis.logging.jdbc.BaseJdbcLogger | debug | 143:>>==>  Preparing: SELECT id, privilege_name, privilege_url FROM sys_privilege WHERE 1 = 1 AND id = ? 
+22:40:02.708 | DEBUG | [qtp1379222018-79] | org.apache.ibatis.logging.jdbc.BaseJdbcLogger | debug | 143:>>==> Parameters: 1(Long)
+22:40:02.772 | TRACE | [qtp1379222018-79] | org.apache.ibatis.logging.jdbc.BaseJdbcLogger | trace | 149:>><==    Columns: id, privilege_name, privilege_url
+22:40:02.772 | TRACE | [qtp1379222018-79] | org.apache.ibatis.logging.jdbc.BaseJdbcLogger | trace | 149:>><==        Row: 1, 用户管理, /users
+22:40:02.778 | DEBUG | [qtp1379222018-79] | org.apache.ibatis.logging.jdbc.BaseJdbcLogger | debug | 143:>><==      Total: 1

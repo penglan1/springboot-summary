@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    type: com.mchange.v2.c3p0.ComboPooledDataSource
+    jdbcUrl: jdbc:mysql://localhost:3306/mybatis-summary?characterEncoding=utf-8&serverTimezone=UTC&useSSL=false
+    user: root
+    password: 4425320
+    driverClass: com.mysql.cj.jdbc.Driver
+    initialPoolSize: 3
+    maxPoolSize: 3
+    idleConnectionTestPeriod: 60
+    breakAfterAcquireFailure: false
+    testConnectionOnCheckin: false
